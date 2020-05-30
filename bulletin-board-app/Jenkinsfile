@@ -6,7 +6,7 @@ node {
 		}	
 
 		stage('build') {
-			docker.build "harsh1354/scripted:1" bulletin-board-app/			
+			docker.build bulletin-board-app/			
         }
 	}
 }
