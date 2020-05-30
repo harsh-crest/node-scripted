@@ -4,5 +4,8 @@ node {
 		stage('checkout') {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
 		}	
+		stage('print') {
+			sh 'pwd'			
+        }
 	}
 }
