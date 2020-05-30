@@ -1,5 +1,5 @@
 node { 
-    withEnv(['registry=harsh1354',
+    withEnv(['registry=harsh1354/scripted',
 			 'DB_ENGINE=sqlite']) {
 		stage('checkout') {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
