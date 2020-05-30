@@ -6,7 +6,7 @@ node {
 		}	
 
 		stage('build') {
-			docker.build registry + ":$BUILD_NUMBER" bulletin-board-app/			
+			docker.build "harsh1354/scripted:1" bulletin-board-app/			
         }
 	}
 }
