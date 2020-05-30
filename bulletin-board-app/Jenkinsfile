@@ -1,5 +1,12 @@
 node { 
-    stage('checkout') {
-        git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
-    }
+    withEnv(['registry = "harsh1354/scripted"',
+             'registryCredential = 'dockerHub'']) {
+		stage('checkout') {
+			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
+		}
+
+		stage('command') {
+			echo "${registry}"
+		}
+	}
 }
