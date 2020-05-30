@@ -5,8 +5,8 @@ node {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
 		}	
 
-		stage('print') {
-			echo "Database engine is ${registry}"			
+		stage('build') {
+			docker.build registry + ":$BUILD_NUMBER" bulletin-board-app/			
         }
 	}
 }
