@@ -6,7 +6,7 @@ node {
 		}	
 
 		stage('print') {
-			echo "Database engine is ${DB_ENGINE}"			
+			echo "Database engine is ${registry}"			
         }
 	}
 }
