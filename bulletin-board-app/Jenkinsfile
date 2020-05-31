@@ -1,12 +1,16 @@
 node { 
     withEnv(['registry=harsh1354/scripted',
 			 'DB_ENGINE=sqlite']) {
-		stage('checkout') {
+		stage('Checkout') {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
 		}	
 
-		stage('build') {
+		stage('Build') {
 			docker.build("${registry}:latest", "bulletin-board-app/")		
+        }
+
+		stage('Tag') {
+			echo "docker tag "${registry}:latest" "${registry}:${BUILD_NUMBER}"		
         }
 	}
 }
