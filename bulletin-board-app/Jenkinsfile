@@ -1,6 +1,7 @@
 node { 
     withEnv(['registry=harsh1354/scripted',
-			 'registryCredential=dockerHub']) {
+			 'registryCredential=dockerHub',
+			 'dockerImage=']) {
 		stage('Checkout') {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
 		}	
