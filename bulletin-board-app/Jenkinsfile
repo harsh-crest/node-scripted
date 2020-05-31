@@ -13,5 +13,11 @@ node {
 		stage('Tag') {
 			sh "docker tag ${registry}:latest ${registry}:${BUILD_NUMBER}"
         }
+
+		stage('Push') {
+			docker.withRegistry( '', registryCredential ) {
+				dockerImage.push()
+			}
+		}
 	}
 }
