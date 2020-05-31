@@ -6,7 +6,7 @@ node {
 		}	
 
 		stage('Build') {
-			docker.build("${registry}:latest", "bulletin-board-app/")		
+			dockerImage=docker.build("${registry}:latest", "bulletin-board-app/")		
         }
 
 		stage('Tag') {
