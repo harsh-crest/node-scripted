@@ -10,7 +10,7 @@ node {
         }
 
 		stage('Tag') {
-			echo "docker tag "${registry}:latest" "${registry}:${BUILD_NUMBER}"		
+			echo "docker tag "${registry}:latest" "${registry}:${BUILD_NUMBER}""	
         }
 	}
 }
