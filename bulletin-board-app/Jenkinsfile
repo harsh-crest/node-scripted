@@ -1,6 +1,6 @@
 node { 
     withEnv(['registry=harsh1354/scripted',
-			 'DB_ENGINE=sqlite']) {
+			 'registryCredential=dockerHub']) {
 		stage('Checkout') {
 			git poll: false, url: 'https://github.com/harsh-crest/node-scripted.git' 
 		}	
